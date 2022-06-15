@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import {toast} from "react-toastify";
+import { toast } from "react-toastify";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import ArrowRightIcon from "../assets/svg/keyboardArrowRightIcon.svg?component";
 import visbilityIcon from "../assets/svg/visibilityIcon.svg";
@@ -31,15 +31,18 @@ function Login() {
     try {
       const auth = getAuth();
 
-      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
 
       if (userCredential.user) {
-        toast(`Welcome Back ${userCredential.user.displayName}!`)
+        toast(`Welcome Back ${userCredential.user.displayName}!`);
         navigate("/explore");
       }
-    } 
-    catch (error) {
-      toast.error("Invalid User Credentials.")
+    } catch (error) {
+      toast.error("Invalid User Credentials.");
     }
   };
 
@@ -87,10 +90,9 @@ function Login() {
           </div>
         </form>
 
-        <OAuth/>
-
+        <OAuth />
         <Link to="/signup" className="registerLink">
-          Signup Instead?
+          Sign Up Instead
         </Link>
       </div>
     </>
