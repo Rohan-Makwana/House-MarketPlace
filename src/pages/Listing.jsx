@@ -43,7 +43,6 @@ function Listing() {
     <main>
       {/*SLIDER*/}
       <Swiper slidesPerView={1} pagination={true} modules={[Pagination]}>
-      // eslint-disable-next-line
         {listing.imgUrls.map((url, index) => (
           <SwiperSlide key={index}>
             <div
