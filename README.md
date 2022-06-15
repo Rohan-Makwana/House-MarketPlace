@@ -32,7 +32,7 @@ Access my site at [React-House-MarketPlace](https://house-market-place-rohan-mak
 - Go to the project directory
 
 ```bash
-  cd Github-Profile-Finder
+  cd House-MarketPlace
 ```
 - Install dependencies
 
@@ -43,7 +43,7 @@ Access my site at [React-House-MarketPlace](https://house-market-place-rohan-mak
 - Start the server
 
 ```bash
-  npm run start
+  npm start
 ```
 
 ## Status
